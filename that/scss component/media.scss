@@ -15,15 +15,74 @@
 
 @media screen and (max-width: 768px) {
     .container{
-        max-width: 720px;
+        max-width: 540px;
     }
     .col-6{
     width: 50%;
     }
-    
+.gallery__card-img{
+    height: 250px;
+}
+.contact__list{
+    margin-bottom: 50px;
+}
+    .mobile-btn{
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        width: 70px;
+        height: 50px;
+        cursor: pointer;
+    }
+    .mobile-btn span,
+    .mobile-btn span::before,
+    .mobile-btn span::after{
+        content: "";
+        display: block;
+        background-color: $primeWhite;
+        height: 5px;
+        position: absolute;
+        width: 100%;
+    }
+    .header__logo{
+        z-index: 5;
+    }
+    .mobile-btn span::after{
+        bottom: -15px;
+    }
+    .mobile-btn span::before{
+        top: -15px;
+    }
+    .header::before{
+        content: "";
+        background-color: $primeBlack;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .header__menu{
+        position: absolute;
+        left: 0;
+        background-color: $primeBlack;
+        top: 0;
+        width: 100%;
+        padding:15px 0;
+        justify-content: center;
+        z-index: 1;
+        transition: 0.7s;
+    }
+    .header__menu-show{
+        z-index: 6;
+        top: 85px;
+        border-top: 1px solid $primeWhite;
+    }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 576px){
     .container{
         max-width: 100%;
         padding: 0 10px;
@@ -34,12 +93,17 @@
     }
     .col-6{
         width: 100%;
-        }
+    }
         .row{
             justify-content: center;
         }
         form{
             margin-top: 50px;
         }
+        .header__menu{
+            column-gap: 25px;
+        }
+
+ }       
     
-}
+

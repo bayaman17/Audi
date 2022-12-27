@@ -54,6 +54,10 @@ body {
   color: #fafafa;
 }
 
+.mobile-btn {
+  display: none;
+}
+
 .banner {
   background-image: url("https://avatars.mds.yandex.net/get-verba/3587101/2a0000017d8623b296bb5cd0810e0a2fbfc1/cattouchret");
   height: 100vh;
@@ -153,10 +157,70 @@ footer p {
 }
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 540px;
   }
   .col-6 {
     width: 50%;
+  }
+  .gallery__card-img {
+    height: 250px;
+  }
+  .contact__list {
+    margin-bottom: 50px;
+  }
+  .mobile-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .mobile-btn span,
+  .mobile-btn span::before,
+  .mobile-btn span::after {
+    content: "";
+    display: block;
+    background-color: #fafafa;
+    height: 5px;
+    position: absolute;
+    width: 100%;
+  }
+  .header__logo {
+    z-index: 5;
+  }
+  .mobile-btn span::after {
+    bottom: -15px;
+  }
+  .mobile-btn span::before {
+    top: -15px;
+  }
+  .header::before {
+    content: "";
+    background-color: #252525;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .header__menu {
+    position: absolute;
+    left: 0;
+    background-color: #252525;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    justify-content: center;
+    z-index: 1;
+    transition: 0.7s;
+  }
+  .header__menu-show {
+    z-index: 6;
+    top: 85px;
+    border-top: 1px solid #fafafa;
   }
 }
 @media screen and (max-width: 576px) {
@@ -176,6 +240,9 @@ footer p {
   }
   form {
     margin-top: 50px;
+  }
+  .header__menu {
+    column-gap: 25px;
   }
 }
 
