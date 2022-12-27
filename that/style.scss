@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat';
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.col-6{
+    padding: 0 15px;
+    width: 50%;
+}
+$primeBlack: #252525;
+$primeWhite: #fafafa;
+
+@mixin colors ($c, $bgc, $bc){
+    color: $c;
+    background-color: $bgc;
+    border: 1px solid $bc;
+}
+
+@import "./scss component/header.scss";
+@import "./scss component/banner.scss";
+@import "./scss component/slider.scss";
+@import "./scss component/gallery.scss";
+@import "./scss component/Contact.scss";
+@import "./scss component/footer.scss";
+@import "./scss component/media.scss";

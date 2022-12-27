@@ -1,0 +1,182 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  padding: 0 15px;
+  width: 50%;
+}
+
+.header {
+  background-color: #252525;
+  padding: 30px 0;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+}
+.header__logo {
+  color: #fafafa;
+  text-transform: uppercase;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  display: flex;
+  column-gap: 50px;
+}
+.header__menu-link {
+  list-style: none;
+}
+.header__menu-link a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fafafa;
+}
+
+.banner {
+  background-image: url("https://avatars.mds.yandex.net/get-verba/3587101/2a0000017d8623b296bb5cd0810e0a2fbfc1/cattouchret");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider {
+  padding-top: 100px;
+}
+.slider__title {
+  margin-bottom: 50px;
+}
+
+.gallery {
+  padding-top: 100px;
+}
+.gallery__title {
+  margin-bottom: 50px;
+}
+.gallery__card {
+  padding: 20px;
+  border-bottom: 1px solid Black;
+  margin-top: 10px;
+}
+.gallery__card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.contact {
+  margin-top: 100px;
+}
+.contact__title {
+  margin-bottom: 50px;
+}
+.contact__list {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.contact__list-items a {
+  text-decoration: none;
+  color: #252525;
+}
+.contact__form {
+  border: 1px solid #252525;
+  border-radius: 20px;
+  padding: 20px;
+}
+.contact__form-input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #252525;
+  outline: none;
+}
+.contact__form-btn {
+  color: #252525;
+  background-color: transparent;
+  border: 1px solid #fafafa;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact__form-btn:hover {
+  color: #fafafa;
+  background-color: #252525;
+  border: 1px solid #252525;
+}
+
+footer {
+  background-color: #252525;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+footer p {
+  color: #fafafa;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .col-6 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .banner {
+    margin-top: 137px;
+    height: 300px;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .row {
+    justify-content: center;
+  }
+  form {
+    margin-top: 50px;
+  }
+}
+
+/*# sourceMappingURL=19less.css.map */
